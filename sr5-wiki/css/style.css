@@ -1,0 +1,397 @@
+/* Shadowrun 5th Edition Wiki - Cyberpunk Terminal Style */
+
+:root {
+    --bg-primary: #0a0a0f;
+    --bg-secondary: #12121a;
+    --bg-tertiary: #1a1a25;
+    --text-primary: #e0e0e0;
+    --text-secondary: #a0a0b0;
+    --text-muted: #606070;
+    --neon-blue: #00f3ff;
+    --neon-pink: #ff00ff;
+    --neon-green: #00ff41;
+    --neon-yellow: #ffee00;
+    --neon-red: #ff2a2a;
+    --border-color: #2a2a3a;
+    --code-bg: #0d0d12;
+    --link-color: #00f3ff;
+    --link-hover: #ff00ff;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Courier New', 'Consolas', monospace;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    line-height: 1.6;
+    font-size: 14px;
+}
+
+/* Scanline effect */
+body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: repeating-linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.1),
+        rgba(0, 0, 0, 0.1) 1px,
+        transparent 1px,
+        transparent 2px
+    );
+    pointer-events: none;
+    z-index: 9999;
+}
+
+/* Layout */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Header */
+header {
+    background: var(--bg-secondary);
+    border-bottom: 2px solid var(--neon-blue);
+    padding: 20px 0;
+    margin-bottom: 30px;
+    box-shadow: 0 0 20px rgba(0, 243, 255, 0.3);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 28px;
+    font-weight: bold;
+    color: var(--neon-blue);
+    text-shadow: 0 0 10px var(--neon-blue);
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: var(--neon-pink);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+nav a {
+    color: var(--text-primary);
+    text-decoration: none;
+    padding: 8px 16px;
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    transition: all 0.3s ease;
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+nav a:hover {
+    border-color: var(--neon-pink);
+    color: var(--neon-pink);
+    box-shadow: 0 0 10px rgba(255, 0, 255, 0.5);
+}
+
+nav a.active {
+    background: var(--neon-blue);
+    color: var(--bg-primary);
+    border-color: var(--neon-blue);
+    font-weight: bold;
+}
+
+/* Main Content */
+main {
+    background: var(--bg-secondary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 30px;
+    margin-bottom: 30px;
+}
+
+h1 {
+    color: var(--neon-blue);
+    font-size: 32px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    text-shadow: 0 0 5px var(--neon-blue);
+}
+
+h2 {
+    color: var(--neon-pink);
+    font-size: 24px;
+    margin: 30px 0 15px 0;
+    border-left: 3px solid var(--neon-pink);
+    padding-left: 15px;
+}
+
+h3 {
+    color: var(--neon-green);
+    font-size: 18px;
+    margin: 20px 0 10px 0;
+}
+
+p {
+    margin-bottom: 15px;
+    color: var(--text-secondary);
+}
+
+/* Tables */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    background: var(--bg-tertiary);
+    border: 1px solid var(--border-color);
+}
+
+th, td {
+    padding: 12px 15px;
+    text-align: left;
+    border: 1px solid var(--border-color);
+}
+
+th {
+    background: var(--bg-primary);
+    color: var(--neon-blue);
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-size: 12px;
+}
+
+tr:nth-child(even) {
+    background: rgba(255, 255, 255, 0.02);
+}
+
+tr:hover {
+    background: rgba(0, 243, 255, 0.1);
+}
+
+/* Links and Anchors */
+a {
+    color: var(--link-color);
+    text-decoration: none;
+    border-bottom: 1px dotted var(--link-color);
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--link-hover);
+    border-bottom-color: var(--link-hover);
+    text-shadow: 0 0 5px var(--link-hover);
+}
+
+/* Anchor links (IDs for cross-referencing) */
+[id] {
+    scroll-margin-top: 100px;
+}
+
+[id]:target {
+    background: rgba(0, 243, 255, 0.1);
+    border-left: 3px solid var(--neon-blue);
+    padding-left: 10px;
+}
+
+/* Code blocks */
+code {
+    background: var(--code-bg);
+    padding: 2px 6px;
+    border-radius: 3px;
+    font-family: 'Courier New', monospace;
+    color: var(--neon-green);
+    font-size: 13px;
+}
+
+pre {
+    background: var(--code-bg);
+    padding: 15px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    overflow-x: auto;
+    margin: 15px 0;
+}
+
+pre code {
+    padding: 0;
+    background: none;
+}
+
+/* Lists */
+ul, ol {
+    margin: 15px 0;
+    padding-left: 30px;
+}
+
+li {
+    margin-bottom: 8px;
+    color: var(--text-secondary);
+}
+
+/* Search Box */
+.search-container {
+    margin-bottom: 20px;
+}
+
+#search-input {
+    width: 100%;
+    padding: 12px 15px;
+    background: var(--bg-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 3px;
+    color: var(--text-primary);
+    font-family: 'Courier New', monospace;
+    font-size: 14px;
+}
+
+#search-input:focus {
+    outline: none;
+    border-color: var(--neon-blue);
+    box-shadow: 0 0 10px rgba(0, 243, 255, 0.3);
+}
+
+#search-results {
+    margin-top: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.search-result-item {
+    padding: 10px;
+    border-bottom: 1px solid var(--border-color);
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.search-result-item:hover {
+    background: rgba(0, 243, 255, 0.1);
+}
+
+.search-result-item h4 {
+    color: var(--neon-blue);
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.search-result-item p {
+    font-size: 12px;
+    color: var(--text-muted);
+    margin: 0;
+}
+
+/* Sidebar/TOC */
+.toc {
+    background: var(--bg-tertiary);
+    padding: 20px;
+    border-radius: 5px;
+    border: 1px solid var(--border-color);
+    margin-bottom: 20px;
+}
+
+.toc h3 {
+    color: var(--neon-yellow);
+    margin-top: 0;
+}
+
+.toc ul {
+    list-style: none;
+    padding: 0;
+}
+
+.toc li {
+    margin-bottom: 5px;
+}
+
+.toc a {
+    font-size: 13px;
+}
+
+/* Info boxes */
+.info-box {
+    background: var(--bg-tertiary);
+    border-left: 4px solid var(--neon-blue);
+    padding: 15px;
+    margin: 20px 0;
+    border-radius: 0 5px 5px 0;
+}
+
+.info-box.warning {
+    border-left-color: var(--neon-red);
+}
+
+.info-box.tip {
+    border-left-color: var(--neon-green);
+}
+
+.info-box-title {
+    font-weight: bold;
+    color: var(--neon-blue);
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    color: var(--text-muted);
+    font-size: 12px;
+    border-top: 1px solid var(--border-color);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        gap: 15px;
+    }
+    
+    nav ul {
+        justify-content: center;
+    }
+    
+    main {
+        padding: 20px;
+    }
+    
+    h1 {
+        font-size: 24px;
+    }
+    
+    h2 {
+        font-size: 20px;
+    }
+}
+
+/* Utility classes */
+.text-neon-blue { color: var(--neon-blue); }
+.text-neon-pink { color: var(--neon-pink); }
+.text-neon-green { color: var(--neon-green); }
+.text-neon-yellow { color: var(--neon-yellow); }
+.text-neon-red { color: var(--neon-red); }
+
+.mt-20 { margin-top: 20px; }
+.mb-20 { margin-bottom: 20px; }
+.bold { font-weight: bold; }
+.italic { font-style: italic; }
