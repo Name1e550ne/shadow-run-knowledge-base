@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shadowrun 5th Edition Wiki - Local static knowledge base for SR5 rules, mechanics, and reference">
+    <title>{PAGE_TITLE} - Shadowrun 5th Edition Wiki</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon (optional) -->
+    <!-- <link rel="icon" type="image/x-icon" href="favicon.ico"> -->
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">SHADOWRUN <span>5E</span> WIKI</div>
+            <nav>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="pages/core_rules.html">Core Rules</a></li>
+                    <li><a href="pages/attributes.html">Attributes</a></li>
+                    <li><a href="pages/combat.html">Combat</a></li>
+                    <li><a href="pages/magic.html">Magic</a></li>
+                    <li><a href="pages/gear.html">Gear</a></li>
+                    <li><a href="pages/glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <!-- Search Box (optional - include on pages that need it) -->
+        <!-- 
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Search the wiki...">
+            <div id="search-results"></div>
+        </div> 
+        -->
+
+        <main>
+            <!-- Page Title -->
+            <h1>{PAGE_TITLE}</h1>
+
+            <!-- Table of Contents (optional) -->
+            <!--
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#section-1">Section 1</a></li>
+                    <li><a href="#section-2">Section 2</a></li>
+                    <li><a href="#section-3">Section 3</a></li>
+                </ul>
+            </div>
+            -->
+
+            <!-- Page Content -->
+            <div class="content">
+                {PAGE_CONTENT}
+            </div>
+
+            <!-- Cross-Reference Links (optional) -->
+            <!--
+            <div class="info-box mt-20">
+                <div class="info-box-title">Related Topics</div>
+                <p>
+                    See also: 
+                    <a href="attributes.html#agility">Agility</a>, 
+                    <a href="combat.html#initiative">Initiative</a>
+                </p>
+            </div>
+            -->
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shadowrun 5th Edition Wiki - Unofficial Fan Resource</p>
+            <p>Shadowrun is a registered trademark of Topps USA, Inc.</p>
+            <p>Last updated: {LAST_UPDATED}</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/search.js"></script>
+    
+    <!-- Page-specific scripts (if needed) -->
+    <!-- <script src="js/page-specific.js"></script> -->
+</body>
+</html>

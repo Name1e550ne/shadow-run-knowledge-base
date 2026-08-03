@@ -1,0 +1,469 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shadowrun 5th Edition - Combat Rules and Mechanics Reference">
+    <title>Combat - Shadowrun 5th Edition Wiki</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">SHADOWRUN <span>5E</span> WIKI</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="core_rules.html">Core Rules</a></li>
+                    <li><a href="attributes.html">Attributes</a></li>
+                    <li><a href="combat.html" class="active">Combat</a></li>
+                    <li><a href="magic.html">Magic</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main>
+            <!-- Page Title -->
+            <h1>Combat Rules</h1>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#initiative">Initiative</a></li>
+                    <li><a href="#combat-turns">Combat Turns & Actions</a></li>
+                    <li><a href="#attack-tests">Attack Tests</a></li>
+                    <li><a href="#damage-types">Damage Types</a></li>
+                    <li><a href="#armor-damage-resistance">Armor & Damage Resistance</a></li>
+                    <li><a href="#combat-modifiers">Combat Modifiers</a></li>
+                    <li><a href="#melee-combat">Melee Combat</a></li>
+                    <li><a href="#ranged-combat">Ranged Combat</a></li>
+                </ul>
+            </div>
+
+            <!-- Page Content -->
+            <div class="content">
+                <p>Combat in Shadowrun 5th Edition is turn-based and uses Initiative passes to determine action order. Combat can be physical or astral, and involves attack tests, damage resistance, and various tactical modifiers.</p>
+
+                <section id="initiative">
+                    <h2>Initiative</h2>
+                    
+                    <p>Initiative determines the order in which characters act during combat. It is calculated at the start of each combat turn.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Initiative Formula</div>
+                        <p><code class="text-neon-green">Physical Initiative = Reaction + Intuition + 1d6</code></p>
+                        <p><code class="text-neon-green">Matrix Initiative = Reaction + Logic + 1d6 (for VR)</code></p>
+                        <p><code class="text-neon-green">Astral Initiative = Intuition + Willpower + 1d6</code></p>
+                    </div>
+
+                    <h3 id="initiative-passes">Initiative Passes</h3>
+                    
+                    <p>Characters may have multiple Initiative passes based on their capabilities:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Source</th>
+                                <th>Additional Passes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Base</td>
+                                <td>1 pass</td>
+                            </tr>
+                            <tr>
+                                <td>Wired Reflexes (Rating 1-3)</td>
+                                <td>+1 to +3 passes</td>
+                            </tr>
+                            <tr>
+                                <td>Reflex Booster (Rating 1-3)</td>
+                                <td>+1 to +3 passes</td>
+                            </tr>
+                            <tr>
+                                <td>Adept Power: Improved Reflexes</td>
+                                <td>+1 to +3 passes</td>
+                            </tr>
+                            <tr>
+                                <td>Certain Spells/Drugs</td>
+                                <td>Varies</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="mt-20">Maximum Initiative passes: <strong>4</strong></p>
+
+                    <h3 id="initiative-example">Example Initiative Roll</h3>
+                    
+                    <pre><code>Street Samurai with Wired Reflexes 3:
+- Reaction: 9
+- Intuition: 6
+- Base Dice: 1d6 (rolls 4)
+- Total: 9 + 6 + 4 = 19 Initiative Score
+- Passes: 1 (base) + 3 (wired reflexes) = 4 passes</code></pre>
+                </section>
+
+                <section id="combat-turns">
+                    <h2>Combat Turns & Actions</h2>
+                    
+                    <p>Each combat turn represents approximately 3 seconds of game time. During their Initiative pass, a character can take one Major Action and one Minor Action.</p>
+
+                    <h3 id="major-actions">Major Actions</h3>
+                    
+                    <ul>
+                        <li>Make an attack (melee or ranged)</li>
+                        <li>Cast a spell</li>
+                        <li>Move full run distance</li>
+                        <li>Reload a weapon</li>
+                        <li>Ready or stow a weapon</li>
+                        <li>Use a complex Matrix action</li>
+                    </ul>
+
+                    <h3 id="minor-actions">Minor Actions</h3>
+                    
+                    <ul>
+                        <li>Move up to run distance</li>
+                        <li>Speak a short phrase</li>
+                        <li>Drop an item</li>
+                        <li>Change firing mode</li>
+                        <li>Activate/deactivate cyberware</li>
+                        <li>Take cover</li>
+                    </ul>
+
+                    <div class="info-box tip">
+                        <div class="info-box-title text-neon-green">Free Actions</div>
+                        <p>Some actions don't count toward your action limit: speaking, dropping prone, recalling knowledge, or observing surroundings.</p>
+                    </div>
+                </section>
+
+                <section id="attack-tests">
+                    <h2>Attack Tests</h2>
+                    
+                    <p>Attack tests determine if you hit your target. The basic formula depends on whether you're making a melee or ranged attack.</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Attack Type</th>
+                                <th>Dice Pool</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Melee Attack</td>
+                                <td>Strength + Close Combat Skill</td>
+                            </tr>
+                            <tr>
+                                <td>Ranged Attack</td>
+                                <td>Agility + Firearms Skill</td>
+                            </tr>
+                            <tr>
+                                <td>Thrown Weapon</td>
+                                <td>Agility + Throwing Weapons</td>
+                            </tr>
+                            <tr>
+                                <td>Spell Attack</td>
+                                <td>Magic + Sorcery</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="hitting-targets">Hitting Targets</h3>
+                    
+                    <p>After rolling your attack pool, compare your hits to the target's defense hits (see <a href="#defense-tests">Defense Tests</a> below).</p>
+                </section>
+
+                <section id="damage-types">
+                    <h2>Damage Types</h2>
+                    
+                    <p>Shadowrun has three damage types, each affecting targets differently:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Color Code</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Stun Damage</td>
+                                <td class="text-neon-blue">Blue</td>
+                                <td>Non-lethal, heals faster, fills Stun track first</td>
+                            </tr>
+                            <tr>
+                                <td>Physical Damage</td>
+                                <td class="text-neon-red">Red</td>
+                                <td>Lethal, heals slowly, fills Physical track</td>
+                            </tr>
+                            <tr>
+                                <td>Overflow Damage</td>
+                                <td class="text-neon-pink">Pink</td>
+                                <td>Spills over from Stun to Physical when Stun track is full</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <div class="info-box warning mt-20">
+                        <div class="info-box-title text-neon-red">Damage Tracks</div>
+                        <p>Characters have two damage tracks:
+                        <br>- Stun Track = 8 + Willpower
+                        <br>- Physical Track = 8 + Body
+                        <br>When Physical track fills, the character dies.</p>
+                    </div>
+                </section>
+
+                <section id="armor-damage-resistance">
+                    <h2>Armor & Damage Resistance</h2>
+                    
+                    <p>When attacked, defenders make a Damage Resistance test to reduce incoming damage.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Damage Resistance Test</div>
+                        <p><code class="text-neon-green">Body + Armor Rating = Defense Dice</code></p>
+                        <p>Each hit reduces the damage by 1.</p>
+                    </div>
+
+                    <h3 id="damage-calculation">Damage Calculation</h3>
+                    
+                    <ol>
+                        <li>Attacker rolls attack test and gets hits</li>
+                        <li>Attacker calculates base damage (weapon DV + net hits)</li>
+                        <li>Defender rolls Body + Armor</li>
+                        <li>Subtract defense hits from damage</li>
+                        <li>Apply remaining damage to appropriate track</li>
+                    </ol>
+
+                    <h3 id="damage-example">Example</h3>
+                    
+                    <pre><code>Attack Scenario:
+- Attacker hits with 4 successes
+- Weapon Damage Value (DV): 8P
+- Net hits: 2 (after defender's dodge)
+- Base Damage: 8 + 2 = 10P
+
+Defense:
+- Defender's Body: 5
+- Armor Rating: 6
+- Defense Pool: 11 dice
+- Defense Hits: 3
+
+Final Damage: 10 - 3 = 7 Physical damage</code></pre>
+                </section>
+
+                <section id="combat-modifiers">
+                    <h2>Combat Modifiers</h2>
+                    
+                    <p>Various factors can modify your attack dice pool. Apply all relevant modifiers before rolling.</p>
+
+                    <h3 id="ranged-modifiers">Ranged Attack Modifiers</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Modifier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Target behind cover</td>
+                                <td>-2 to -6</td>
+                            </tr>
+                            <tr>
+                                <td>Target running</td>
+                                <td>-1 to -3</td>
+                            </tr>
+                            <tr>
+                                <td>Low light conditions</td>
+                                <td>-2</td>
+                            </tr>
+                            <tr>
+                                <td>Darkness (no vision mods)</td>
+                                <td>-6</td>
+                            </tr>
+                            <tr>
+                                <td>Range (beyond optimal)</td>
+                                <td>-1 to -4</td>
+                            </tr>
+                            <tr>
+                                <td>Called shot (body part)</td>
+                                <td>-2 to -6</td>
+                            </tr>
+                            <tr>
+                                <td>Firing in Full Auto</td>
+                                <td>+2 dice pool, increased recoil</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="melee-modifiers">Melee Attack Modifiers</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Modifier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Charging</td>
+                                <td>+1 dice, +1 damage</td>
+                            </tr>
+                            <tr>
+                                <td>Flanking</td>
+                                <td>+2 dice</td>
+                            </tr>
+                            <tr>
+                                <td>Multiple attackers</td>
+                                <td>+1 per additional attacker</td>
+                            </tr>
+                            <tr>
+                                <td>Off-balance</td>
+                                <td>-2 dice</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="melee-combat">
+                    <h2>Melee Combat</h2>
+                    
+                    <p>Melee combat occurs when characters engage in close quarters combat with weapons or unarmed strikes.</p>
+
+                    <h3 id="melee-steps">Melee Combat Steps</h3>
+                    
+                    <ol>
+                        <li>Attacker declares target and makes attack test (Strength + Close Combat)</li>
+                        <li>Defender may make defense test (Reaction + Close Combat or Dodge)</li>
+                        <li>Calculate net hits</li>
+                        <li>Calculate damage (Weapon DV + Strength + net hits)</li>
+                        <li>Defender rolls damage resistance (Body + Armor)</li>
+                        <li>Apply damage</li>
+                    </ol>
+
+                    <h3 id="unarmed-combat">Unarmed Combat</h3>
+                    
+                    <p>Unarmed attacks use Strength + Unarmed Combat skill. Base damage is equal to Strength.</p>
+                </section>
+
+                <section id="ranged-combat">
+                    <h2>Ranged Combat</h2>
+                    
+                    <p>Ranged combat involves firearms, thrown weapons, and projectile weapons.</p>
+
+                    <h3 id="range-ranges">Range Categories</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Range</th>
+                                <th>Distance</th>
+                                <th>Modifier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Point Blank</td>
+                                <td>0-2m</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Short Range</td>
+                                <td>Up to Short range</td>
+                                <td>None</td>
+                            </tr>
+                            <tr>
+                                <td>Medium Range</td>
+                                <td>Short to Medium</td>
+                                <td>-2</td>
+                            </tr>
+                            <tr>
+                                <td>Long Range</td>
+                                <td>Medium to Long</td>
+                                <td>-4</td>
+                            </tr>
+                            <tr>
+                                <td>Extreme Range</td>
+                                <td>Beyond Long</td>
+                                <td>-6</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="firing-modes">Firing Modes</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Mode</th>
+                                <th>Effect</th>
+                                <th>Ammo Cost</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Single Shot (SS)</td>
+                                <td>Standard attack</td>
+                                <td>1 round</td>
+                            </tr>
+                            <tr>
+                                <td>Semi-Auto (SA)</td>
+                                <td>+1 dice</td>
+                                <td>1 round</td>
+                            </tr>
+                            <tr>
+                                <td>Burst Fire (BF)</td>
+                                <td>+2 dice, area effect possible</td>
+                                <td>3 rounds</td>
+                            </tr>
+                            <tr>
+                                <td>Full Auto (FA)</td>
+                                <td>+4 dice, high recoil</td>
+                                <td>10+ rounds</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <hr class="mt-20 mb-20" style="border: none; border-top: 1px solid var(--border-color);">
+
+                    <div class="info-box">
+                        <div class="info-box-title">Related Topics</div>
+                        <p>
+                            See also: 
+                            <a href="attributes.html#agility">Agility</a>, 
+                            <a href="attributes.html#reaction">Reaction</a>,
+                            <a href="gear.html#weapons">Weapons</a>,
+                            <a href="gear.html#armor">Armor</a>,
+                            <a href="magic.html#combat-spells">Combat Spells</a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shadowrun 5th Edition Wiki - Unofficial Fan Resource</p>
+            <p>Shadowrun is a registered trademark of Topps USA, Inc.</p>
+            <p>Last updated: 2024-01-15</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/search.js"></script>
+</body>
+</html>

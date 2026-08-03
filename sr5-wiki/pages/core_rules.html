@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shadowrun 5th Edition - Core Rules and Mechanics Reference">
+    <title>Core Rules - Shadowrun 5th Edition Wiki</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">SHADOWRUN <span>5E</span> WIKI</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="core_rules.html" class="active">Core Rules</a></li>
+                    <li><a href="attributes.html">Attributes</a></li>
+                    <li><a href="combat.html">Combat</a></li>
+                    <li><a href="magic.html">Magic</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main>
+            <!-- Page Title -->
+            <h1>Core Rules</h1>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#dice-pools">Dice Pools & Tests</a></li>
+                    <li><a href="#successes">Counting Successes</a></li>
+                    <li><a href="#thresholds">Thresholds & Limits</a></li>
+                    <li><a href="#opposed-tests">Opposed Tests</a></li>
+                    <li><a href="#extended-tests">Extended Tests</a></li>
+                    <li><a href="#teamwork">Teamwork Tests</a></li>
+                </ul>
+            </div>
+
+            <!-- Page Content -->
+            <div class="content">
+                <section id="dice-pools">
+                    <h2>Dice Pools & Tests</h2>
+                    
+                    <p>In Shadowrun 5th Edition, all actions are resolved using six-sided dice (d6). The basic mechanic involves building a <strong>dice pool</strong> based on your attributes and skills, rolling the dice, and counting successes.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Basic Formula</div>
+                        <p><code class="text-neon-green">Dice Pool = Attribute + Skill + Modifiers</code></p>
+                    </div>
+
+                    <h3 id="attribute-skill-combination">Attribute + Skill Combination</h3>
+                    
+                    <p>Most tests combine one attribute with one skill. For example:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Test Type</th>
+                                <th>Formula</th>
+                                <th>Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Physical Test</td>
+                                <td>Strength + Athletics</td>
+                                <td>Climbing a wall</td>
+                            </tr>
+                            <tr>
+                                <td>Social Test</td>
+                                <td>Charisma + Persuasion</td>
+                                <td>Negotiating a deal</td>
+                            </tr>
+                            <tr>
+                                <td>Technical Test</td>
+                                <td>Logic + Computers</td>
+                                <td>Hacking a system</td>
+                            </tr>
+                            <tr>
+                                <td>Combat Test</td>
+                                <td>Agility + Firearms</td>
+                                <td>Shooting at a target</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="mt-20">For more information on attributes, see <a href="attributes.html">Attributes page</a>.</p>
+                </section>
+
+                <section id="successes">
+                    <h2>Counting Successes</h2>
+                    
+                    <p>After rolling your dice pool, count the number of dice that show a <strong>5 or 6</strong>. Each 5 or 6 counts as one success (also called a "hit").</p>
+
+                    <div class="info-box tip">
+                        <div class="info-box-title text-neon-green">Exploding Sixes (Optional Rule)</div>
+                        <p>Some groups use the "exploding sixes" rule: when you roll a 6, you may reroll that die and add additional successes. Check with your gamemaster.</p>
+                    </div>
+
+                    <h3 id="example-roll">Example Roll</h3>
+                    
+                    <p><strong>Situation:</strong> A runner attempts to pick a lock.</p>
+                    <ul>
+                        <li><strong>Attribute:</strong> Agility 4</li>
+                        <li><strong>Skill:</strong> Locksmith 3</li>
+                        <li><strong>Modifiers:</strong> None</li>
+                        <li><strong>Dice Pool:</strong> 4 + 3 = 7 dice</li>
+                    </ul>
+
+                    <pre><code>Roll: [2] [3] [5] [5] [6] [1] [4]
+Successes: 5, 5, 6 = 3 hits</code></pre>
+
+                    <p>This action succeeds with 3 hits.</p>
+                </section>
+
+                <section id="thresholds">
+                    <h2>Thresholds & Limits</h2>
+                    
+                    <h3 id="threshold-definition">Threshold</h3>
+                    
+                    <p>The <strong>threshold</strong> is the minimum number of hits required for a test to succeed. Thresholds are set by the gamemaster based on task difficulty:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Difficulty</th>
+                                <th>Threshold</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Simple</td>
+                                <td>1</td>
+                                <td>Routine task, minimal challenge</td>
+                            </tr>
+                            <tr>
+                                <td>Standard</td>
+                                <td>2-3</td>
+                                <td>Moderate difficulty</td>
+                            </tr>
+                            <tr>
+                                <td>Hard</td>
+                                <td>4-5</td>
+                                <td>Challenging task</td>
+                            </tr>
+                            <tr>
+                                <td>Very Hard</td>
+                                <td>6+</td>
+                                <td>Extremely difficult, nearly impossible</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="limits">Limits</h3>
+                    
+                    <p>Limits represent the maximum number of hits you can achieve on a test, regardless of how many dice you roll. There are three types of limits:</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Limit Type</th>
+                                <th>Applies To</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Physical Limit</td>
+                                <td>Physical actions (running, jumping, melee combat)</td>
+                            </tr>
+                            <tr>
+                                <td>Mental Limit</td>
+                                <td>Mental actions (hacking, research, perception)</td>
+                            </tr>
+                            <tr>
+                                <td>Social Limit</td>
+                                <td>Social interactions (negotiation, intimidation, etiquette)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <p class="mt-20"><strong>Note:</strong> In SR5, limits are typically calculated as half of the relevant attribute (rounded up) plus any modifiers.</p>
+                </section>
+
+                <section id="opposed-tests">
+                    <h2>Opposed Tests</h2>
+                    
+                    <p>When two characters oppose each other directly, both parties roll their dice pools. The character with <strong>more hits</strong> wins. The margin of success is the difference between the winner's hits and the loser's hits.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Opposed Test Resolution</div>
+                        <p><code class="text-neon-green">Net Hits = Winner's Hits - Loser's Hits</code></p>
+                    </div>
+
+                    <h3 id="opposed-test-example">Example</h3>
+                    
+                    <p><strong>Situation:</strong> A stealthy runner tries to sneak past a guard.</p>
+                    <ul>
+                        <li><strong>Runner:</strong> Agility + Stealth = 6 dice → rolls 4 hits</li>
+                        <li><strong>Guard:</strong> Logic + Perception = 5 dice → rolls 2 hits</li>
+                        <li><strong>Result:</strong> Runner wins with 2 net hits (4 - 2 = 2)</li>
+                    </ul>
+
+                    <p>If both parties roll the same number of hits, the test is a tie and must be rerolled, or the status quo remains (typically favoring the defender).</p>
+                </section>
+
+                <section id="extended-tests">
+                    <h2>Extended Tests</h2>
+                    
+                    <p>Extended tests are used for complex tasks that require multiple rolls over time. Each roll represents a time interval (minutes, hours, days, etc.).</p>
+
+                    <h3 id="extended-test-rules">Rules</h3>
+                    
+                    <ol>
+                        <li>Set a cumulative threshold (usually much higher than a simple test)</li>
+                        <li>Roll your dice pool once per time interval</li>
+                        <li>Add hits from each roll to a running total</li>
+                        <li>Continue until you meet/exceed the threshold or run out of time</li>
+                    </ol>
+
+                    <div class="info-box warning">
+                        <div class="info-box-title text-neon-red">Glitches & Critical Glitches</div>
+                        <p>If more than half of your dice show 1s, you glitch. On a critical glitch (all 1s with no hits), something goes catastrophically wrong and the test automatically fails.</p>
+                    </div>
+
+                    <h3 id="extended-test-example">Example</h3>
+                    
+                    <p><strong>Situation:</strong> A decker is trying to crack a secure system (Threshold: 12 hits, Interval: 1 minute)</p>
+                    <ul>
+                        <li><strong>Roll 1:</strong> 3 hits (Total: 3)</li>
+                        <li><strong>Roll 2:</strong> 4 hits (Total: 7)</li>
+                        <li><strong>Roll 3:</strong> 2 hits (Total: 9)</li>
+                        <li><strong>Roll 4:</strong> 5 hits (Total: 14) → <span class="text-neon-green bold">SUCCESS!</span></li>
+                    </ul>
+
+                    <p>Total time elapsed: 4 minutes</p>
+                </section>
+
+                <section id="teamwork">
+                    <h2>Teamwork Tests</h2>
+                    
+                    <p>When multiple characters work together on a task, one character is designated as the <strong>primary actor</strong>, and others provide assistance.</p>
+
+                    <h3 id="teamwork-mechanics">Mechanics</h3>
+                    
+                    <ol>
+                        <li>Each assistant makes a relevant skill test (Threshold: 1)</li>
+                        <li>For each hit the assistants achieve, the primary actor gains +1 die to their pool</li>
+                        <li>The primary actor then makes their test with the augmented dice pool</li>
+                    </ol>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Teamwork Example</div>
+                        <p>Three runners help their hacker breach a system. Each makes an Intelligence + Computers test (Threshold 1). They score 2, 1, and 3 hits respectively. The primary hacker gains +6 dice to their hacking pool.</p>
+                    </div>
+
+                    <hr class="mt-20 mb-20" style="border: none; border-top: 1px solid var(--border-color);">
+
+                    <div class="info-box">
+                        <div class="info-box-title">Related Topics</div>
+                        <p>
+                            See also: 
+                            <a href="attributes.html">Attributes</a>, 
+                            <a href="combat.html#initiative">Initiative</a>,
+                            <a href="glossary.html#hits">Hits</a>,
+                            <a href="glossary.html#threshold">Threshold</a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shadowrun 5th Edition Wiki - Unofficial Fan Resource</p>
+            <p>Shadowrun is a registered trademark of Topps USA, Inc.</p>
+            <p>Last updated: 2024-01-15</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/search.js"></script>
+</body>
+</html>

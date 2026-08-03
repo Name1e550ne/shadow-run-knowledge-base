@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Shadowrun 5th Edition - Magic and Sorcery Reference Guide">
+    <title>Magic - Shadowrun 5th Edition Wiki</title>
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <!-- Header with Navigation -->
+    <header>
+        <div class="container header-content">
+            <div class="logo">SHADOWRUN <span>5E</span> WIKI</div>
+            <nav>
+                <ul>
+                    <li><a href="../index.html">Home</a></li>
+                    <li><a href="core_rules.html">Core Rules</a></li>
+                    <li><a href="attributes.html">Attributes</a></li>
+                    <li><a href="combat.html">Combat</a></li>
+                    <li><a href="magic.html" class="active">Magic</a></li>
+                    <li><a href="gear.html">Gear</a></li>
+                    <li><a href="glossary.html">Glossary</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Main Content -->
+    <div class="container">
+        <main>
+            <!-- Page Title -->
+            <h1>Magic & Sorcery</h1>
+
+            <!-- Table of Contents -->
+            <div class="toc">
+                <h3>Table of Contents</h3>
+                <ul>
+                    <li><a href="#magic-users">Magic Users</a></li>
+                    <li><a href="#spellcasting">Spellcasting</a></li>
+                    <li><a href="#combat-spells">Combat Spells</a></li>
+                    <li><a href="#summoning">Summoning</a></li>
+                    <li><a href="#drain">Drain</a></li>
+                    <li><a href="#adept-powers">Adept Powers</a></li>
+                    <li><a href="#magical-types">Magical Traditions</a></li>
+                </ul>
+            </div>
+
+            <!-- Page Content -->
+            <div class="content">
+                <p>Magic in Shadowrun 5th Edition is powered by mana from the astral plane. Magicians, adepts, and mystic adepts can harness this power through their Magic attribute.</p>
+
+                <div class="info-box">
+                    <div class="info-box-title">Magic Attribute</div>
+                    <p>The Magic attribute determines spellcasting ability, summoning strength, and adept powers. It cannot coexist with Resonance (technomancers).</p>
+                </div>
+
+                <section id="magic-users">
+                    <h2>Magic Users</h2>
+                    
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Description</th>
+                                <th>Key Abilities</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="magician">
+                                <td class="text-neon-pink bold">Magician</td>
+                                <td>Full spellcaster who can cast spells, summon spirits, and enchant items</td>
+                                <td>Sorcery, Conjuring, Enchanting</td>
+                            </tr>
+                            <tr id="adept">
+                                <td class="text-neon-green bold">Adept</td>
+                                <td>Channels magic internally to enhance physical abilities</td>
+                                <td>Adept Powers, no spells</td>
+                            </tr>
+                            <tr id="mystic-adept">
+                                <td class="text-neon-blue bold">Mystic Adept</td>
+                                <td>Hybrid of magician and adept</td>
+                                <td>Limited spells + Adept Powers</td>
+                            </tr>
+                            <tr id="aspected-magician">
+                                <td class="text-neon-yellow bold">Aspected Magician</td>
+                                <td>Specialist in one or two magical skills only</td>
+                                <td>Limited to chosen skills</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section id="spellcasting">
+                    <h2>Spellcasting</h2>
+                    
+                    <p>Spellcasting allows magicians to manipulate mana to produce magical effects.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Spellcasting Test</div>
+                        <p><code class="text-neon-green">Dice Pool = Magic + Sorcery [Astral Limit]</code></p>
+                    </div>
+
+                    <h3 id="spell-types">Spell Types</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Type</th>
+                                <th>Target</th>
+                                <th>Resistance</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Direct Combat</td>
+                                <td>Living target</td>
+                                <td>Body + Counterspelling</td>
+                            </tr>
+                            <tr>
+                                <td>Indirect Combat</td>
+                                <td>Area/object</td>
+                                <td>Standard defense test</td>
+                            </tr>
+                            <tr>
+                                <td>Health</td>
+                                <td>Living target</td>
+                                <td>Body + Counterspelling</td>
+                            </tr>
+                            <tr>
+                                <td>Illusion</td>
+                                <td>Senses/area</td>
+                                <td>Intuition + Counterspelling</td>
+                            </tr>
+                            <tr>
+                                <td>Manipulation</td>
+                                <td>Object/area</td>
+                                <td>Varies</td>
+                            </tr>
+                            <tr>
+                                <td>Detection</td>
+                                <td>Information</td>
+                                <td>None</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="spellcasting-steps">Spellcasting Steps</h3>
+                    
+                    <ol>
+                        <li>Declare spell and target</li>
+                        <li>Choose Force (1 to Magic rating × 2)</li>
+                        <li>Roll Magic + Sorcery</li>
+                        <li>Target resists (if applicable)</li>
+                        <li>Caster resists Drain</li>
+                        <li>Apply spell effects</li>
+                    </ol>
+                </section>
+
+                <section id="combat-spells">
+                    <h2>Combat Spells</h2>
+                    
+                    <p>Combat spells are used to directly harm enemies. They come in two varieties: Direct and Indirect.</p>
+
+                    <h3 id="direct-combat-spells">Direct Combat Spells</h3>
+                    
+                    <p>Direct combat spells attack the target's body directly with magical energy.</p>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Spell</th>
+                                <th>Force</th>
+                                <th>Damage Type</th>
+                                <th>Description</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr id="mana-bolt">
+                                <td class="text-neon-pink bold">Mana Bolt</td>
+                                <td>Variable</td>
+                                <td>Stun</td>
+                                <td>Basic magical projectile</td>
+                            </tr>
+                            <tr id="manaball">
+                                <td class="text-neon-pink bold">Manaball</td>
+                                <td>Variable</td>
+                                <td>Stun</td>
+                                <td>Area-effect mana explosion</td>
+                            </tr>
+                            <tr id="powerbolt">
+                                <td class="text-neon-red bold">Powerbolt</td>
+                                <td>Variable</td>
+                                <td>Physical</td>
+                                <td>Deadly magical dart</td>
+                            </tr>
+                            <tr id="powerball">
+                                <td class="text-neon-red bold">Powerball</td>
+                                <td>Variable</td>
+                                <td>Physical</td>
+                                <td>Area-effect physical damage</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="indirect-combat-spells">Indirect Combat Spells</h3>
+                    
+                    <p>Indirect combat spells create physical effects that then attack the target (fireballs, lightning bolts, etc.).</p>
+
+                    <div class="info-box tip mt-20">
+                        <div class="info-box-title text-neon-green">Spell Example: Mana Bolt</div>
+                        <p><strong>Force:</strong> 6<br>
+                        <strong>Cast Roll:</strong> Magic + Sorcery<br>
+                        <strong>Defense:</strong> Body + Counterspelling<br>
+                        <strong>Damage:</strong> Force hits (Stun)<br>
+                        <strong>Drain:</strong> (Force ÷ 2) + 1</p>
+                    </div>
+                </section>
+
+                <section id="summoning">
+                    <h2>Summoning</h2>
+                    
+                    <p>Conjurers can summon spirits from the astral planes to serve them.</p>
+
+                    <div class="info-box">
+                        <div class="info-box-title">Summoning Test</div>
+                        <p><code class="text-neon-green">Dice Pool = Magic + Conjuring + Summoning Focus [Astral Limit]</code></p>
+                    </div>
+
+                    <h3 id="spirit-types">Spirit Types</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Tradition</th>
+                                <th>Spirit Types</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Hermetic</td>
+                                <td>Air, Earth, Fire, Water, Man, Beast</td>
+                            </tr>
+                            <tr>
+                                <td>Shamanic</td>
+                                <td>Air, Earth, Fire, Water, Plant, Animal</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="binding">Binding</h3>
+                    
+                    <p>After summoning, spirits must be bound to remain longer than a single task:</p>
+                    <ul>
+                        <li>Roll Magic + Conjuring + Focus vs. Spirit Force + Resistance</li>
+                        <li>Net hits determine services (max = summoner's Magic)</li>
+                        <li>Failed binding = spirit may break free</li>
+                    </ul>
+                </section>
+
+                <section id="drain">
+                    <h2>Drain</h2>
+                    
+                    <p>Drain is the backlash from channeling magical energy. It must be resisted after casting spells or summoning.</p>
+
+                    <div class="info-box warning">
+                        <div class="info-box-title text-neon-red">Drain Calculation</div>
+                        <p><code class="text-neon-green">Drain Value (DV) = (Force ÷ 2) + Modifiers</code></p>
+                        <p><code class="text-neon-green">Resistance Test = Willpower + Logic [Mental Limit]</code></p>
+                    </div>
+
+                    <h3 id="drain-modifiers">Drain Modifiers</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Condition</th>
+                                <th>Modifier</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Casting without specialization</td>
+                                <td>+2 DV</td>
+                            </tr>
+                            <tr>
+                                <td>Quick casting</td>
+                                <td>-2 DV, -2 dice pool</td>
+                            </tr>
+                            <tr>
+                                <td>Ritual casting</td>
+                                <td>-2 DV per minute of ritual</td>
+                            </tr>
+                            <tr>
+                                <td>Using appropriate focus</td>
+                                <td>Added to dice pool</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="drain-damage">Drain Damage</h3>
+                    
+                    <p>If your drain resistance roll doesn't beat the DV:</p>
+                    <ul>
+                        <li>Difference of 0 or less: No damage</li>
+                        <li>Difference of 1-2: Stun damage</li>
+                        <li>Difference of 3+: Physical damage</li>
+                    </ul>
+
+                    <div class="info-box mt-20">
+                        <div class="info-box-title">Drain Example</div>
+                        <pre><code>Magician casts Force 8 spell:
+- Base Drain: 8 ÷ 2 = 4
+- No modifiers: DV = 4
+- Resistance: Willpower 5 + Logic 4 = 9 dice
+- Rolls 5 hits
+- Net: 5 - 4 = 1 hit success
+- Result: No drain damage!</code></pre>
+                    </div>
+                </section>
+
+                <section id="adept-powers">
+                    <h2>Adept Powers</h2>
+                    
+                    <p>Adepts channel magic internally to gain supernatural abilities called Adept Powers.</p>
+
+                    <h3 id="common-adept-powers">Common Adept Powers</h3>
+
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Power</th>
+                                <th>PP Cost</th>
+                                <th>Effect</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Improved Ability</td>
+                                <td>1/rank</td>
+                                <td>+2 dice per rank to one skill</td>
+                            </tr>
+                            <tr>
+                                <td>Improved Reflexes</td>
+                                <td>3/rank</td>
+                                <td>+1 Initiative pass per rank</td>
+                            </tr>
+                            <tr>
+                                <td>Mystic Armor</td>
+                                <td>1/rank</td>
+                                <td>+1 armor per rank</td>
+                            </tr>
+                            <tr>
+                                <td>Striking Grade</td>
+                                <td>1/rank</td>
+                                <td>+1 damage per rank (unarmed)</td>
+                            </tr>
+                            <tr>
+                                <td>Killing Hands</td>
+                                <td>1</td>
+                                <td>Unarmed attacks count as lethal</td>
+                            </tr>
+                            <tr>
+                                <td>Enhanced Senses</td>
+                                <td>0.25/rank</td>
+                                <td>Low-light, thermographic, etc.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+
+                    <h3 id="power-points">Power Points</h3>
+                    
+                    <p>Adepts receive Power Points (PP) equal to their Magic attribute. Each power costs PP based on its rating.</p>
+                </section>
+
+                <section id="magical-traditions">
+                    <h2>Magical Traditions</h2>
+                    
+                    <p>Magicians follow different traditions that affect how they perceive and interact with magic.</p>
+
+                    <h3 id="hermetic">Hermetic Tradition</h3>
+                    
+                    <p>Scholarly approach to magic using complex formulas, symbols, and logic.</p>
+                    <ul>
+                        <li><strong>Focus:</strong> Intellect and study</li>
+                        <li><strong>Spirits:</strong> Elemental (Air, Earth, Fire, Water, Man, Beast)</li>
+                        <li><strong>Style:</strong> Ceremonial, precise</li>
+                    </ul>
+
+                    <h3 id="shamanic">Shamanic Tradition</h3>
+                    
+                    <p>Intuitive approach based on personal connections and nature.</p>
+                    <ul>
+                        <li><strong>Focus:</strong> Emotion and instinct</li>
+                        <li><strong>Spirits:</strong> Nature (Air, Earth, Fire, Water, Plant, Animal)</li>
+                        <li><strong>Style:</strong> Spontaneous, expressive</li>
+                    </ul>
+
+                    <hr class="mt-20 mb-20" style="border: none; border-top: 1px solid var(--border-color);">
+
+                    <div class="info-box">
+                        <div class="info-box-title">Related Topics</div>
+                        <p>
+                            See also: 
+                            <a href="attributes.html#magic">Magic Attribute</a>, 
+                            <a href="attributes.html#willpower">Willpower</a>,
+                            <a href="combat.html#attack-tests">Attack Tests</a>,
+                            <a href="glossary.html#astral">Astral Plane</a>
+                        </p>
+                    </div>
+                </section>
+            </div>
+        </main>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>Shadowrun 5th Edition Wiki - Unofficial Fan Resource</p>
+            <p>Shadowrun is a registered trademark of Topps USA, Inc.</p>
+            <p>Last updated: 2024-01-15</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="../js/search.js"></script>
+</body>
+</html>
